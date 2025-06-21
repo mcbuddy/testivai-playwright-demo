@@ -1,0 +1,24 @@
+{
+  "name": "testivai-playwright-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:visual": "playwright test --project=chromium",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "update-baselines": "testivai compare --update-baselines",
+    "compare": "testivai compare"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.53.0",
+    "@types/node": "^24.0.3",
+    "testivai-cli": "^1.0.0",
+    "testivai-visual-regression": "^1.0.0",
+    "typescript": "^5.8.3"
+  }
+}
