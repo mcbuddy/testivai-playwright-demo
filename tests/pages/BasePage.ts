@@ -10,7 +10,7 @@ const playwrightPlugin = () => ({
     // The actual implementation would handle more options and edge cases
     const screenshotOptions = {
       fullPage: options?.fullPage || false,
-      path: `.testivai/visual-regression/baseline/${name}.png`
+      path: `.testivai/visual-regression/compare/${name}.png`
     };
     
     if (options?.selector) {
@@ -27,7 +27,9 @@ const playwrightPlugin = () => ({
 // Initialize testivAI with the playwright plugin
 const testivai = testivAI.init({
   framework: 'playwright',
-  baselineDir: '.testivai/visual-regression/baseline'
+  baselineDir: '.testivai/visual-regression/baseline',
+  compareDir: '.testivai/visual-regression/compare',
+  reportDir: '.testivai/visual-regression/reports'
 }).use(playwrightPlugin());
 
 /**
